@@ -1,0 +1,23 @@
+body {
+  color: white;
+  font-family: Maximum Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.main-container {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.header {
+  flex: 2;
+}
+
+.tv-show-detail {
+  flex: 4;
+}
+
+.recommendations {
+  flex: 2;
+}
