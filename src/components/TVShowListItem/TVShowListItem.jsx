@@ -4,14 +4,14 @@ import React from "react";
 
 const MAX_CHAR_TITLE = 20;
 
-export function TVShowListItem({ tvShow, onClick }) {
+export function TVShowListItem({ tvShow, onClickItem }) {
   const tvShowName = () => {
     return tvShow.name > MAX_CHAR_TITLE
       ? `${tvShow.name.split(0, MAX_CHAR_TITLE)}...`
       : tvShow.name;
   };
   const handleClick = () => {
-    onClick(tvShow);
+    onClickItem(tvShow);
   };
   return (
     <div onClick={handleClick} className={style.container}>

@@ -35,6 +35,10 @@ export function App() {
   const updateCurrentTvShow = (tvShow) => {
     setCurrentTVShow(tvShow);
   };
+
+  const searchTvShow = (tvShow) => {
+    console.log(tvShow);
+  };
   return (
     <div
       className="main-container"
@@ -55,7 +59,7 @@ export function App() {
             />
           </div>
           <div className="col-md-12 col-lg-4">
-            <SearchBar />
+            <SearchBar onEnter={searchTvShow} />
           </div>
         </div>
       </div>
