@@ -3,6 +3,7 @@ import { TVShowAPI } from "./api/tv-show";
 import { BACKDROP_BASE_URL } from "./config";
 import { TvShowDetail } from "./components/TvShowDetail/TvShowDetail";
 import { TVShowList } from "./components/TVShowList/TVShowList";
+import { SearchBar } from "./components/SearchBar/SearchBar";
 import { Logo } from "./components/Logo/Logo";
 import logoImg from "./assets/images/logo.png";
 
@@ -54,7 +55,7 @@ export function App() {
             />
           </div>
           <div className="col-md-12 col-lg-4">
-            <input style={{ width: "100%" }} type="text"></input>
+            <SearchBar />
           </div>
         </div>
       </div>
