@@ -1,7 +1,6 @@
 .container {
   position: relative;
   cursor: pointer;
-  flex: 33.3%;
 }
 
 .img {

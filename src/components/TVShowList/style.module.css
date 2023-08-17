@@ -10,7 +10,8 @@
 
 .list {
   display: flex;
-  width: 100vh -25px;
+  width: 100vw - 25px;
+  overflow-x: hidden;
 }
 
 .tv_show_item {

@@ -8,6 +8,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  padding: 25px;
 }
 
 .header {
@@ -20,4 +21,17 @@ body {
 
 .recommendations {
   flex: 2;
+}
+
+/* Mouse out of scrollbar */
+::-webkit-scrollbar {
+  height: 14px;
+  width: 4px;
+  background: transparent;
+}
+
+/* Mouse out on horizontal scrollbar */
+::-webkit-scrollbar-thumb:horizontal {
+  background: rgba(0, 0, 0, 0.61);
+  border-radius: 10px;
 }

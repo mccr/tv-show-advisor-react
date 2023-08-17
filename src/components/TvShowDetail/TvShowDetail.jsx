@@ -5,7 +5,7 @@ import { FiveStarRating } from "../FiveStarRating/FiveStarRating";
 export function TvShowDetail({ tvShow }) {
   const rating = tvShow.vote_average / 2;
   return (
-    <div>
+    <div className="tv-show-detail">
       <div className={style.title}>{tvShow.name}</div>
       <div className={style.rating_container}>
         <FiveStarRating ratingValue={rating} />
