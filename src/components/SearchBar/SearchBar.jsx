@@ -2,10 +2,10 @@ import React from "react";
 import style from "./style.module.css";
 import { Search as SearchIcon } from "react-bootstrap-icons";
 
-export function SearchBar({ onEnter }) {
+export function SearchBar({ onSubmit }) {
   const handleEnter = (e) => {
-    if (e.key === "Enter") {
-      onEnter(e.target.value);
+    if (e.key === "Enter" && e.target.value.trim() !== "") {
+      onSubmit(e.target.value);
     }
   };
   return (
@@ -15,7 +15,7 @@ export function SearchBar({ onEnter }) {
         className={style.input}
         type="text"
         placeholder="Search a tv show"
-        onKeyDown={handleEnter}
+        onKeyUp={handleEnter}
       />
     </>
   );

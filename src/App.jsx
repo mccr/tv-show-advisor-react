@@ -24,6 +24,14 @@ export function App() {
       setRecommendationList(recommendationList.slice(0, 10));
     }
   }
+
+  async function fetchByTitle(title) {
+    const searchResponse = await TVShowAPI.fetchByTitle(title);
+    if (searchResponse.length > 0) {
+      setCurrentTVShow(searchResponse[0]);
+    }
+  }
+
   useEffect(() => {
     fetchPopulars();
   }, []);
@@ -34,10 +42,6 @@ export function App() {
 
   const updateCurrentTvShow = (tvShow) => {
     setCurrentTVShow(tvShow);
-  };
-
-  const searchTvShow = (tvShow) => {
-    console.log(tvShow);
   };
   return (
     <div
@@ -59,7 +63,7 @@ export function App() {
             />
           </div>
           <div className="col-md-12 col-lg-4">
-            <SearchBar onEnter={searchTvShow} />
+            <SearchBar onSubmit={fetchByTitle} />
           </div>
         </div>
       </div>

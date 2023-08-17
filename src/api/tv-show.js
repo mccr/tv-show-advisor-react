@@ -1,6 +1,7 @@
 import axios from "axios";
 import { FAKE_POPULARS } from "./fake-data";
 import { FAKE_RECOMMENDATIONS } from "./fake-recommendations";
+import { FAKE_SEARCH_RESPONSE } from "./fake-search";
 import { BASE_URL, API_KEY_PARAM } from "../config";
 
 export class TVShowAPI {
@@ -17,5 +18,13 @@ export class TVShowAPI {
     // );
     // return response.data.results;
     return FAKE_RECOMMENDATIONS;
+  }
+
+  static async fetchByTitle(title) {
+    // const response = await axios.get(
+    //   `${BASE_URL}search/tv${API_KEY_PARAM}&query=${title}`
+    // );
+    // return response.data.results;
+    return FAKE_SEARCH_RESPONSE;
   }
 }
