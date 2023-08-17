@@ -20,7 +20,7 @@ export function TVShowListItem({ tvShow, onClick }) {
         src={SMALL_IMG_COVER_BASE_URL + tvShow.backdrop_path}
         alt={tvShow.name}
       />
-      <div className={style.title}>{tvShow.name}</div>
+      <div className={style.title}>{tvShowName}</div>
     </div>
   );
 }

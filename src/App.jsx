@@ -31,6 +31,9 @@ export function App() {
     if (currentTVShow) fetchRecommendations(currentTVShow.id);
   }, [currentTVShow]);
 
+  const updateCurrentTvShow = (tvShow) => {
+    setCurrentTVShow(tvShow);
+  };
   return (
     <div
       className="main-container"
@@ -57,7 +60,12 @@ export function App() {
       </div>
       {currentTVShow && <TvShowDetail tvShow={currentTVShow} />}
       <div className="recommendations">
-        {currentTVShow && <TVShowList tvShowList={recommendationList} />}
+        {currentTVShow && (
+          <TVShowList
+            tvShowList={recommendationList}
+            onClickItem={updateCurrentTvShow}
+          />
+        )}
       </div>
     </div>
   );
