@@ -1,5 +1,4 @@
 import style from "./style.module.css";
-import React from "react";
 import { TVShowListItem } from "../TVShowListItem/TVShowListItem";
 
 export function TVShowList({ tvShowList, onClickItem }) {

@@ -1,5 +1,4 @@
 import style from "./style.module.css";
-import React from "react";
 
 export function Logo({ title, subtitle, img }) {
   return (

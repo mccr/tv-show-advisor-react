@@ -1,6 +1,5 @@
 import { SMALL_IMG_COVER_BASE_URL } from "../../config";
 import style from "./style.module.css";
-import React from "react";
 
 const MAX_CHAR_TITLE = 20;
 

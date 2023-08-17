@@ -1,4 +1,3 @@
-import React from "react";
 import { StarFill, StarHalf, Star as StarEmpty } from "react-bootstrap-icons";
 
 export function FiveStarRating({ ratingValue }) {
