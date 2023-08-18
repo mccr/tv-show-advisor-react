@@ -1,7 +1,7 @@
 import style from "./style.module.css";
 import { TVShowListItem } from "../TVShowListItem/TVShowListItem";
 
-export function TVShowList({ tvShowList, onClickItem }) {
+export const TVShowList = ({ tvShowList, onClickItem }) => {
   return (
     <div>
       <h1 className={style.title}>You'll probably like:</h1>
@@ -16,4 +16,4 @@ export function TVShowList({ tvShowList, onClickItem }) {
       </div>
     </div>
   );
-}
+};

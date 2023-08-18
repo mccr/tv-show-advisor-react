@@ -1,6 +1,6 @@
 import { StarFill, StarHalf, Star as StarEmpty } from "react-bootstrap-icons";
 
-export function FiveStarRating({ ratingValue }) {
+export const FiveStarRating = ({ ratingValue }) => {
   const starList = [];
   const starFillCount = Math.floor(ratingValue);
   const hasHalfStar = ratingValue - parseInt(ratingValue) >= 0.5;
@@ -14,4 +14,4 @@ export function FiveStarRating({ ratingValue }) {
     starList.push(<StarEmpty key={`'star-empty-${i}'`} />);
   }
   return <div>{starList}</div>;
-}
+};

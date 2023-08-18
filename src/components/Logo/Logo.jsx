@@ -1,6 +1,6 @@
 import style from "./style.module.css";
 
-export function Logo({ title, subtitle, img }) {
+export const Logo = ({ title, subtitle, img }) => {
   return (
     <>
       <div className={style.container}>
@@ -10,4 +10,4 @@ export function Logo({ title, subtitle, img }) {
       <h4 className={style.subtitle}>{subtitle}</h4>
     </>
   );
-}
+};

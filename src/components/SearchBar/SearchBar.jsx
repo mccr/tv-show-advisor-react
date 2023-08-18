@@ -1,7 +1,7 @@
 import style from "./style.module.css";
 import { Search as SearchIcon } from "react-bootstrap-icons";
 
-export function SearchBar({ onSubmit }) {
+export const SearchBar = ({ onSubmit }) => {
   const handleEnter = (e) => {
     if (e.key === "Enter" && e.target.value.trim() !== "") {
       onSubmit(e.target.value);
@@ -18,4 +18,4 @@ export function SearchBar({ onSubmit }) {
       />
     </>
   );
-}
+};

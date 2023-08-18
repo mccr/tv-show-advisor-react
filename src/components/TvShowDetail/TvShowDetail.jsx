@@ -2,7 +2,7 @@ import style from "./style.module.css";
 import React from "react";
 import { FiveStarRating } from "../FiveStarRating/FiveStarRating";
 
-export function TvShowDetail({ tvShow }) {
+export const TvShowDetail = ({ tvShow }) => {
   const rating = tvShow.vote_average / 2;
   return (
     <div className="tv-show-detail">
@@ -14,4 +14,4 @@ export function TvShowDetail({ tvShow }) {
       <div className={style.overview}>{tvShow.overview}</div>
     </div>
   );
-}
+};

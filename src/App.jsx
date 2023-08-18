@@ -7,28 +7,40 @@ import { SearchBar } from "./components/SearchBar/SearchBar";
 import { Logo } from "./components/Logo/Logo";
 import logoImg from "./assets/images/logo.png";
 
-export function App() {
+export const App = () => {
   const [currentTVShow, setCurrentTVShow] = useState();
   const [recommendationList, setRecommendationList] = useState([]);
 
   async function fetchPopulars() {
-    const popularTVShowList = await TVShowAPI.fetchPopulars();
-    if (popularTVShowList.length > 0) {
-      setCurrentTVShow(popularTVShowList[0]);
+    try {
+      const popularTVShowList = await TVShowAPI.fetchPopulars();
+      if (popularTVShowList.length > 0) {
+        setCurrentTVShow(popularTVShowList[0]);
+      }
+    } catch (error) {
+      alert("Something went wrong when fecthing popular tv shows");
     }
   }
 
   async function fetchRecommendations(tvShowId) {
-    const recommendationList = await TVShowAPI.fetchRecommendations(tvShowId);
-    if (recommendationList.length > 0) {
-      setRecommendationList(recommendationList.slice(0, 10));
+    try {
+      const recommendationList = await TVShowAPI.fetchRecommendations(tvShowId);
+      if (recommendationList.length > 0) {
+        setRecommendationList(recommendationList.slice(0, 10));
+      }
+    } catch (error) {
+      alert("Something went wrong when fecthing recommendations");
     }
   }
 
   async function fetchByTitle(title) {
-    const searchResponse = await TVShowAPI.fetchByTitle(title);
-    if (searchResponse.length > 0) {
-      setCurrentTVShow(searchResponse[0]);
+    try {
+      const searchResponse = await TVShowAPI.fetchByTitle(title);
+      if (searchResponse.length > 0) {
+        setCurrentTVShow(searchResponse[0]);
+      }
+    } catch (error) {
+      alert("Something went wrong when fecthing tv show");
     }
   }
 
@@ -78,4 +90,4 @@ export function App() {
       </div>
     </div>
   );
-}
+};
